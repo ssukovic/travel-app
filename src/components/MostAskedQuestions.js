@@ -122,7 +122,7 @@ export default function MostAskedQuestions() {
                         id="outlined-multiline-static"
                         label="Post a comment"
                         multiline
-                        rows={3}
+                        rows={2}
                         fullWidth
                         style={{ marginBottom: "0.5em" }}
                       />
