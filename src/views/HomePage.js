@@ -52,9 +52,6 @@ export const HomePage = () => {
               <SearchModal noResultsReceived={handleNoResults} />
             </Box>
             <Box>
-              <Typography variant="h5" sx={{ marginBottom: "1rem" }}>
-                Most popular posts
-              </Typography>
               <PostList />
             </Box>
             <Box>
@@ -64,7 +61,7 @@ export const HomePage = () => {
         ) : (
           <Box className="formContainer">
             <Typography variant="h5">
-              Currently there are no results for your search
+              We do not have any results for your search :(
             </Typography>
             <Button onClick={handleSearch} variant="outlined">
               Ask a question
