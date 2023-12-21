@@ -58,23 +58,11 @@ export default function MostAskedQuestions() {
   return (
     <Grid container>
       <Grid item xs={9}>
-        <Typography
-          sx={{ fontWeight: "light" }}
-          align="left"
-          variant="h3"
-          component="h3"
-        >
-          Most asked question
-        </Typography>
+        <Typography variant="h5">Most asked question</Typography>
       </Grid>
       <Grid item xs={3}>
         <CardActions sx={{ justifyContent: "center" }}>
-          <Button
-            fullWidth
-            size="large"
-            variant="outlined"
-            onClick={handleSearch}
-          >
+          <Button variant="outlined" onClick={handleSearch}>
             Ask a question
           </Button>
         </CardActions>
