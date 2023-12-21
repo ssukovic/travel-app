@@ -30,12 +30,12 @@ const bull = (
 
 export const DetailedPostView = () => {
   const [newComment, setNewComment] = useState("");
-  const [comments, setComments] = useState([{text: "Awesome tips, thanks!", user: "Dragan"}, {text:"How much money do I need for a weekend in Paris?", user: "Adriana"}]);
+  const [comments, setComments] = useState([{text: "Awesome tips, thanks!", user: "Dragan", avatar: "D"}, {text:"How much money do I need for a weekend in Paris?", user: "Adriana", avatar: "A"}]);
   const handleCommentChange = (event) => {
     setNewComment(event.target.value);
   };
   const handleLeaveComment = () => {
-    setComments([...comments, {text: newComment, user: "Teodora"}]);
+    setComments([...comments, {text: newComment, user: "Teodora", avatar: "T"}]);
     setNewComment("");
   };
   return (
@@ -60,12 +60,12 @@ export const DetailedPostView = () => {
     </Box>
 
     <div style={{ display: "flex", justifyContent: "center" }}>
-    <Card sx={{ minWidth: 275, marginRight: 5, width: 500, marginTop: 3 }}>
+    <Card sx={{ minWidth: 275, marginRight: 5, width: 530, marginTop: 3 }}>
       <CardHeader title="A lovely weekend in Paris" style={{textAlign: "center" }}/>
       <Typography sx={{ fontSize: 14, textAlign: "center" }} gutterBottom>
           by Anja Solak
         </Typography>
-      <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
+      <ImageList sx={{ width: 530, height: 450 }} cols={3} rowHeight={164}>
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
           <img
@@ -91,7 +91,7 @@ export const DetailedPostView = () => {
           <List>
             {comments.map((comment, index) => (
               <ListItem key={index} >
-                <Avatar style={{width:29, height: 29, marginRight:8}}>U</Avatar>
+                <Avatar style={{width:29, height: 29, marginRight:8}}>{comment.avatar}</Avatar>
                 <ListItemText
                   primary={comment.text}
                   secondary={`by ${comment.user}`}
