@@ -4,7 +4,7 @@ import { Avatar, Box, Card, CardActions, CardContent, CardHeader, Divider, IconB
 import Button from '@mui/material/Button';
 
 
-export const MostAskedQuestions = () => {
+export default function MostAskedQuestions() {
     const questions = [
         {
             id: 1, user: { name: 'Sara S.', userPic: 'https://i.pravatar.cc/150?img=5' },
@@ -34,10 +34,10 @@ export const MostAskedQuestions = () => {
     return (
         <Grid container>
             <Grid item xs={9}>
-                <Typography style={{ marginLeft: '72px' }} sx={{ fontWeight: 'light' }} align="left" variant="h3" component="h2">Most asked question</Typography>
+                <Typography sx={{ fontWeight: 'light' }} mb="0.5em" align="left" variant="h3" component="h2">Most asked question</Typography>
             </Grid>
             <Grid item xs={3}>
-                <CardActions sx={{ justifyContent: "center"}}>
+                <CardActions sx={{ justifyContent: "center" }}>
                     <Button fullWidth size="large" variant="outlined">Ask a question</Button>
                 </CardActions>
 
@@ -47,8 +47,8 @@ export const MostAskedQuestions = () => {
                 {
                     questions.map(q => {
                         return (
-                            <Paper style={{ padding: "1em" }}>
-                                <Grid container spacing={2}>
+                            <>
+                                <Grid container spacing={2} pt="1em">
                                     <Grid item>
                                         <Avatar alt={q.user.name} src={q.user.userPic} />
                                     </Grid>
@@ -90,11 +90,10 @@ export const MostAskedQuestions = () => {
                                     </Grid>
                                 </Grid>
                                 <Divider variant="fullWidth" />
-                            </Paper>
+                            </>
                         )
                     })
                 }
-
             </Grid>
 
         </Grid>
