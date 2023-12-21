@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import SearchModal from "../components/SearchModal";
 import "./HomePage.css";
+import MostAskedQuestions from "../components/MostAskedQuestions";
 
 export const HomePage = () => {
   return (
@@ -14,7 +15,7 @@ export const HomePage = () => {
         <Typography variant="h4">Most popular posts</Typography>
       </Box>
       <Box>
-        <Typography variant="h4">Most asked questions</Typography>
+        <MostAskedQuestions/>
       </Box>
     </Box>
   );
