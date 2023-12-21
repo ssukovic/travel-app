@@ -9,7 +9,6 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import HomeIcon from '@mui/icons-material/Home';
 import { Link } from "react-router-dom";
-import Button from '@mui/material/Button';
 import "./HomePage.css";
 
 export const HomePage = () => {
