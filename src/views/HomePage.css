@@ -1,0 +1,7 @@
+.homepage {
+    margin: 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: flex-start;
+}
