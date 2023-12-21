@@ -47,7 +47,6 @@ export const HomePage = () => {
       <>
         {noResults ? (
           <Box className="homepage">
-            <Typography variant="h4">Travel experiences</Typography>
             <Box>
               <SearchModal noResultsReceived={handleNoResults} />
             </Box>
