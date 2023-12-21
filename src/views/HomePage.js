@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Box, Typography, Button } from "@mui/material";
 import SearchModal from "../components/SearchModal";
-import "./HomePage.css";
 import { PostList } from "./PostList";
 import MostAskedQuestions from "../components/MostAskedQuestions";
+import "./HomePage.css";
 
 import "./HomePage.css";
 
@@ -30,6 +30,7 @@ export const HomePage = () => {
           </Box>
           <Box>
             <Typography variant="h4">Most popular posts</Typography>
+            <PostList />
           </Box>
           <Box>
             <MostAskedQuestions />
