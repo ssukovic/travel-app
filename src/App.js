@@ -7,6 +7,7 @@ import {
   DetailedPostView,
   HomePage,
   TravelTipForm,
+  SearchResults,
 } from "./views";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="creator-form" element={<CreatorForm />} />
           <Route path="detailed-post-view" element={<DetailedPostView />} />
           <Route path="travel-tip-form" element={<TravelTipForm />} />
+          <Route path="no-search-results" element={<SearchResults />} />
         </Routes>
       </BrowserRouter>
     </div>

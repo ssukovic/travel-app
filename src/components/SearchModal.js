@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
@@ -50,6 +51,7 @@ const names = [
 ];
 
 export default function SearchModal() {
+  const navigate = useNavigate();
   const [personName, setPersonName] = React.useState([]);
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -63,6 +65,10 @@ export default function SearchModal() {
       // On autofill we get a stringified value.
       typeof value === "string" ? value.split(",") : value
     );
+  };
+
+  const handleSearch = () => {
+    navigate("/no-search-results");
   };
 
   return (
@@ -109,6 +115,9 @@ export default function SearchModal() {
               ))}
             </Select>
           </FormControl>
+          <Button onClick={handleSearch} variant="contained">
+            Search
+          </Button>
         </Box>
       </Modal>
     </div>
