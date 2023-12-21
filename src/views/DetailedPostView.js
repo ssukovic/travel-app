@@ -28,22 +28,9 @@ const bull = (
   </Box>
 );
 
-// const useStyles = makeStyles((theme) => ({
-//   card: {
-//     maxWidth: 300, // Adjust the width as needed
-//   },
-//   commentsSection: {
-//     marginTop: theme.spacing(2), // Adjust spacing as needed
-//   },
-//   comment: {
-//     marginBottom: theme.spacing(1), // Adjust spacing as needed
-//   },
-// }));
-
 export const DetailedPostView = () => {
-  // const classes = useStyles();
   const [newComment, setNewComment] = useState("");
-  const [comments, setComments] = useState([{text: "WOW", user: "Dragan"}, {text:"nice tips!!", user: "Sara"}]);
+  const [comments, setComments] = useState([{text: "Awesome tips, thanks!", user: "Dragan"}, {text:"How much money do I need for a weekend in Paris?", user: "Adriana"}]);
   const handleCommentChange = (event) => {
     setNewComment(event.target.value);
   };
@@ -73,13 +60,11 @@ export const DetailedPostView = () => {
     </Box>
 
     <div style={{ display: "flex", justifyContent: "center" }}>
-    <Card sx={{ minWidth: 275, marginRight: 5 }}>
-      <CardHeader title="Gabon"/>
-      {/* <CardMedia
-      component="img"
-      height="140"
-      image="https://upload.wikimedia.org/wikipedia/commons/a/a1/Plaine_aux_images_Nyoni%C3%A9_GABON.jpg"
-      alt="Post Images"/> */}
+    <Card sx={{ minWidth: 275, marginRight: 5, width: 500, marginTop: 3 }}>
+      <CardHeader title="A lovely weekend in Paris" style={{textAlign: "center" }}/>
+      <Typography sx={{ fontSize: 14, textAlign: "center" }} gutterBottom>
+          by Anja Solak
+        </Typography>
       <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
@@ -92,25 +77,17 @@ export const DetailedPostView = () => {
         </ImageListItem>
       ))}
     </ImageList>
-      <Typography sx={{ fontSize: 14 }} gutterBottom>
-          Posted by Teodora
-        </Typography>
       <CardContent>
       <Typography variant="body2" color="text.secondary" style={{textAlign: "left"}}>
-          Description: Gabon was awesome, visit it asap!
+          Last weekend, I embarked on a whirlwind adventure in the City of Love – Paris. The Eiffel Tower, adorned in golden hues, stood tall against the twilight sky, marking the beginning of our journey. From the Louvre’s artistry to the culinary delights of Montmartre, every moment was spent well. Paris, with its timeless charm and cultural richness, proved to be the perfect muse for a weekend getaway. Each cobblestone street, every bite of a flaky croissant, and the panoramic views from the Sacré-Cœur Basilica contributed to a great experience. Vive la Paris!
         </Typography>
         {/* Location Label */}
         <Typography variant="subtitle2" color="text.secondary" style={{textAlign: "left"}}>
-          Location: Gabon
+          Location: Paris
         </Typography>
         {/* Comment Section */}
         <div style={{display: "flex", alignItems: "center", marginTop: 10}}><Typography variant="subtitle2" color="text.secondary">Replies</Typography><Divider light style={{marginLeft:8, flex:1}}/></div>
         <div style={{marginTop: 1}}>
-          {/* {comments.map((comment, index) => (
-            <Typography key={index} variant="body2" color="text.secondary">
-              {comment}
-            </Typography>
-          ))} */}
           <List>
             {comments.map((comment, index) => (
               <ListItem key={index} >
@@ -145,51 +122,51 @@ export const DetailedPostView = () => {
 
 const itemData = [
   {
-    img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
+    img: 'https://thumbs.dreamstime.com/b/louvre-museum-paris-28960688.jpg',
     title: 'Breakfast',
   },
   {
-    img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
+    img: 'https://thumbs.dreamstime.com/b/paris-france-19597218.jpg',
     title: 'Burger',
   },
   {
-    img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
+    img: 'https://thumbs.dreamstime.com/b/arc-de-triomphe-arch-triumph-paris-france-12524477.jpg',
     title: 'Camera',
   },
   {
-    img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
+    img: 'https://thumbs.dreamstime.com/b/louvre-paris-20878633.jpg',
     title: 'Coffee',
   },
   {
-    img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
+    img: 'https://thumbs.dreamstime.com/b/paris-springtime-eiffel-tower-france-blossoming-tree-foreground-focus-blossom-tree-flowers-daylight-outdoor-40570512.jpg',
     title: 'Hats',
   },
   {
-    img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
+    img: 'https://thumbs.dreamstime.com/b/cafe-lunch-time-paris-france-latin-quarter-s-many-cafes-students-tourists-36800882.jpg',
     title: 'Honey',
   },
   {
-    img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
+    img: 'https://thumbs.dreamstime.com/b/cinderella-castle-disney-land-paris-most-visited-attraction-all-france-europe-35951002.jpg',
     title: 'Basketball',
   },
   {
-    img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
+    img: 'https://thumbs.dreamstime.com/b/louvre-paris-17631736.jpg',
     title: 'Fern',
   },
   {
-    img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
+    img: 'https://thumbs.dreamstime.com/b/view-typical-paris-cafe-le-consulat-montmartre-france-july-july-area-most-popular-destinations-32282590.jpg',
     title: 'Mushrooms',
   },
   {
-    img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
+    img: 'https://thumbs.dreamstime.com/b/paris-moulin-rouge-cabaret-night-39298380.jpg',
     title: 'Tomato basil',
   },
   {
-    img: 'https://images.unsplash.com/photo-1471357674240-e1a485acb3e1',
+    img: 'https://thumbs.dreamstime.com/b/paris-1245511.jpg',
     title: 'Sea star',
   },
   {
-    img: 'https://images.unsplash.com/photo-1589118949245-7d38baf380d6',
+    img: 'https://thumbs.dreamstime.com/b/paris-night-notre-dame-de-cathedral-68121349.jpg',
     title: 'Bike',
   },
 ];
