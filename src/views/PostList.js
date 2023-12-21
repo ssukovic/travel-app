@@ -2,21 +2,11 @@ import React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardHeader from "@mui/material/CardHeader";
-import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import { CardMedia } from "@mui/material";
 import { Grid, CardActions, Typography } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import { Likes } from "../components/Likes";
-
-const bull = (
-  <Box
-    component="span"
-    sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
-  >
-    •
-  </Box>
-);
 
 const posts = [
   {
@@ -43,13 +33,6 @@ const posts = [
       "https://images.unsplash.com/photo-1552568282-59ce97dffb87?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     likes: 21,
   },
-  // {
-  //   id: 4,
-  //   title: "What to see in Berlin!",
-  //   location: "Berlin",
-  //   cardImg: "https://images.unsplash.com/photo-1560969184-10fe8719e047?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  //   likes: 4
-  // }
 ];
 
 export const PostList = () => {

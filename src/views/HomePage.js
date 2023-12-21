@@ -35,7 +35,11 @@ export const HomePage = () => {
               aria-label="home"
               sx={{ mr: 2 }}
             >
-              <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+              <Link
+                to="/"
+                onClick={() => setNoResults(true)}
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
                 <HomeIcon />
               </Link>
             </IconButton>
