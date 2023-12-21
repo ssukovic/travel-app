@@ -61,7 +61,11 @@ export const PostList = () => {
       </Grid>
       <Grid item xs={3}>
         <CardActions sx={{ justifyContent: "center" }}>
-          <Button fullWidth variant="outlined">
+          <Button
+            fullWidth
+            variant="outlined"
+            onClick={() => navigate("creator-form")}
+          >
             Create a post
           </Button>
         </CardActions>
@@ -71,7 +75,15 @@ export const PostList = () => {
           <Link style={{ textDecoration: "none" }} to="/detailed-post-view">
             <Card sx={{ minWidth: 275, height: "100%" }}>
               <CardMedia component="img" image={p.cardImg} alt="Post Images" />
-              <CardHeader mb={0} title={p.title} />
+              <CardHeader
+                mb={0}
+                title={p.title}
+                sx={{
+                  height: "4rem",
+                  display: "flex",
+                  alignItems: "flex-start",
+                }}
+              />
               <CardContent
                 sx={{ display: "flex", justifyContent: "space-between" }}
               >
