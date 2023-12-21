@@ -62,7 +62,7 @@ export default function MostAskedQuestions() {
       </Grid>
       <Grid item xs={3}>
         <CardActions sx={{ justifyContent: "center" }}>
-          <Button variant="outlined" onClick={handleSearch}>
+          <Button fullWidth variant="outlined" onClick={handleSearch}>
             Ask a question
           </Button>
         </CardActions>
@@ -122,7 +122,7 @@ export default function MostAskedQuestions() {
                         id="outlined-multiline-static"
                         label="Post a comment"
                         multiline
-                        rows={3}
+                        rows={2}
                         fullWidth
                         style={{ marginBottom: "0.5em" }}
                       />

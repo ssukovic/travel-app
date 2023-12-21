@@ -52,9 +52,6 @@ export const HomePage = () => {
               <SearchModal noResultsReceived={handleNoResults} />
             </Box>
             <Box>
-              <Typography variant="h5" sx={{ marginBottom: "1rem" }}>
-                Most popular posts
-              </Typography>
               <PostList />
             </Box>
             <Box>
