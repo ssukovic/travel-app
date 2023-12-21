@@ -14,7 +14,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/home-page" element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="creator-form" element={<CreatorForm />} />
           <Route path="detailed-post-view" element={<DetailedPostView />} />
           <Route path="travel-tip-form" element={<TravelTipForm />} />
