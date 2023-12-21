@@ -1,22 +1,48 @@
-import React from "react";
-import { Box, Typography } from "@mui/material";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Box, Typography, Button } from "@mui/material";
 import SearchModal from "../components/SearchModal";
-import "./HomePage.css";
 import MostAskedQuestions from "../components/MostAskedQuestions";
 
+import "./HomePage.css";
+
 export const HomePage = () => {
+  const navigate = useNavigate();
+  const [noResults, setNoResults] = useState(true);
+
+  const handleNoResults = (state) => {
+    setNoResults(state);
+  };
+
+  const handleSearch = () => {
+    navigate("/travel-tip-form");
+  };
+
   return (
-    <Box className="homepage">
-      <Typography variant="h4">Travel experiences</Typography>
-      <Box>
-        <SearchModal />
-      </Box>
-      <Box>
-        <Typography variant="h4">Most popular posts</Typography>
-      </Box>
-      <Box>
-        <MostAskedQuestions/>
-      </Box>
-    </Box>
+    <>
+      {noResults ? (
+        <Box className="homepage">
+          <Typography variant="h4">Travel experiences</Typography>
+          <Box>
+            <SearchModal noResultsReceived={handleNoResults} />
+          </Box>
+          <Box>
+            <Typography variant="h4">Most popular posts</Typography>
+          </Box>
+          <Box>
+            <MostAskedQuestions />
+          </Box>
+        </Box>
+      ) : (
+        <Box className="formContainer">
+          <Typography variant="h4">
+            Currently there are no results for your search
+          </Typography>
+          <Button onClick={handleSearch} variant="outlined">
+            Ask a question
+          </Button>
+        </Box>
+      )}
+    </>
   );
 };
