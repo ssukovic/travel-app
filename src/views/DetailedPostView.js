@@ -13,8 +13,11 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import Avatar from '@mui/material/Avatar';
-// import { makeStyles } from "@mui/styles";
-import { CardMedia } from "@mui/material";
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import HomeIcon from '@mui/icons-material/Home';
+import { Link } from "react-router-dom";
 
 const bull = (
   <Box
@@ -49,6 +52,26 @@ export const DetailedPostView = () => {
     setNewComment("");
   };
   return (
+    <div>
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static">
+      <Toolbar style={{justifyContent:"space-between"}}>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="home"
+            sx={{ mr: 2 }}
+          ><Link to="/" style={{textDecoration: "none", color: "inherit"}}>
+            <HomeIcon />
+            </Link>
+          </IconButton>
+          
+          <Button color="inherit">Login</Button>
+        </Toolbar>
+      </AppBar>
+    </Box>
+
     <div style={{ display: "flex", justifyContent: "center" }}>
     <Card sx={{ minWidth: 275, marginRight: 5 }}>
       <CardHeader title="Gabon"/>
@@ -115,6 +138,7 @@ export const DetailedPostView = () => {
         </div>
       </CardContent>
     </Card>
+  </div>
   </div>
 );
 };
