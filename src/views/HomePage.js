@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Box, Typography, Button } from "@mui/material";
 import SearchModal from "../components/SearchModal";
+import "./HomePage.css";
+import { PostList } from "./PostList";
 import MostAskedQuestions from "../components/MostAskedQuestions";
 
 import "./HomePage.css";
