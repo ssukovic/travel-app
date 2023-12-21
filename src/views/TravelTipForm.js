@@ -7,10 +7,10 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Button from "@mui/material/Button";
 import "./TravelTipForm.css";
 import { TagsAutocomplete } from "../components/TagsAutocomplete";
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import HomeIcon from '@mui/icons-material/Home';
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import HomeIcon from "@mui/icons-material/Home";
 import { Link } from "react-router-dom";
 
 const blue = {
@@ -79,49 +79,54 @@ export const TravelTipForm = () => {
   };
   return (
     <div>
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-      <Toolbar style={{justifyContent:"space-between"}}>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="home"
-            sx={{ mr: 2 }}
-          ><Link to="/" style={{textDecoration: "none", color: "inherit"}}>
-            <HomeIcon />
-            </Link>
-          </IconButton>
-          
-          <Button color="inherit">Login</Button>
-        </Toolbar>
-      </AppBar>
-    </Box>
-    <Box className="formContainer">
-      <Typography variant="h5">Tell us what tip do you need</Typography>
-      <TextField
-        id="outlined-search"
-        label="Search location"
-        type="search"
-        InputProps={{
-          endAdornment: (
-            <InputAdornment position="start">
-              <LocationOnIcon />
-            </InputAdornment>
-          ),
-        }}
-      />
-      <TagsAutocomplete />
+      <Box sx={{ flexGrow: 1 }}>
+        <AppBar position="static">
+          <Toolbar style={{ justifyContent: "space-between" }}>
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="home"
+              sx={{ mr: 2 }}
+            >
+              <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+                <HomeIcon />
+              </Link>
+            </IconButton>
 
-      <TextArea
-        className="textArea"
-        placeholder="Tell us what tip do you need"
-      ></TextArea>
+            <Button color="inherit">Login</Button>
+          </Toolbar>
+        </AppBar>
+      </Box>
+      <Box className="formContainer">
+        <Typography variant="h5">Tell us what tip do you need</Typography>
+        <TextField
+          id="outlined-search"
+          label="Search location"
+          type="search"
+          InputProps={{
+            endAdornment: (
+              <InputAdornment position="start">
+                <LocationOnIcon />
+              </InputAdornment>
+            ),
+          }}
+        />
+        <TagsAutocomplete />
 
-      <Button onClick={handleSearch} variant="contained">
-        Save
-      </Button>
-    </Box>
+        <TextArea
+          className="textArea"
+          placeholder="Tell us what tip do you need"
+        ></TextArea>
+
+        <Button
+          onClick={handleSearch}
+          variant="contained"
+          sx={{ marginTop: "15rem" }}
+        >
+          Save
+        </Button>
+      </Box>
     </div>
   );
 };

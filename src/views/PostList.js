@@ -6,7 +6,7 @@ import CardHeader from "@mui/material/CardHeader";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import { CardMedia } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const bull = (
   <Box
@@ -18,6 +18,7 @@ const bull = (
 );
 
 export const PostList = () => {
+  const navigate = useNavigate();
   return (
     <div style={{ display: "flex", alignItems: "center" }}>
       <Link to="/detailed-post-view">
@@ -91,6 +92,7 @@ export const PostList = () => {
       <Button
         variant="outlined"
         style={{ maxHeight: 40, justifyContent: "center" }}
+        onClick={() => navigate("creator-form")}
       >
         Create a new post
       </Button>

@@ -7,7 +7,7 @@ import {
   TextField,
   InputAdornment,
 } from "@mui/material";
-import {} from "@mui/material/Button";
+import SearchIcon from "@mui/icons-material/Search";
 
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { TagsAutocomplete } from "./TagsAutocomplete";
@@ -30,7 +30,13 @@ export default function SearchModal({ noResultsReceived }) {
 
   return (
     <div>
-      <Button aria-describedby={id} variant="outlined" onClick={handleClick}>
+      <Button
+        aria-describedby={id}
+        variant="outlined"
+        onClick={handleClick}
+        endIcon={<SearchIcon />}
+        sx={{ color: "grey", borderColor: "grey" }}
+      >
         What are you looking for?
       </Button>
       <Popper id={id} open={open} anchorEl={anchorEl} transition>
