@@ -1,19 +1,19 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import {
+  Box,
+  Button,
+  Popper,
+  Fade,
+  TextField,
+  InputAdornment,
+} from "@mui/material";
+import {} from "@mui/material/Button";
 
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Popper from "@mui/material/Popper";
-import Fade from "@mui/material/Fade";
-import TextField from "@mui/material/TextField";
-import InputAdornment from "@mui/material/InputAdornment";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import "./SearchModal.css";
 import { TagsAutocomplete } from "./TagsAutocomplete";
+import "./SearchModal.css";
 
-export default function SearchModal() {
-  const navigate = useNavigate();
-
+export default function SearchModal({ noResultsReceived }) {
   const [open, setOpen] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const canBeOpen = open && Boolean(anchorEl);
@@ -25,7 +25,7 @@ export default function SearchModal() {
   };
 
   const handleSearch = () => {
-    navigate("/no-search-results");
+    noResultsReceived(false);
   };
 
   return (
