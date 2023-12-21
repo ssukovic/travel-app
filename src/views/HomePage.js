@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import SearchModal from "../components/SearchModal";
 import "./HomePage.css";
+import { PostList } from "./PostList";
 
 export const HomePage = () => {
   return (
@@ -12,6 +13,7 @@ export const HomePage = () => {
       </Box>
       <Box>
         <Typography variant="h4">Most popular posts</Typography>
+        <PostList/>
       </Box>
       <Box>
         <Typography variant="h4">Most asked questions</Typography>
