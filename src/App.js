@@ -1,6 +1,6 @@
 import React from "react";
 
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 
 import {
   CreatorForm,
@@ -13,7 +13,7 @@ import {
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="creator-form" element={<CreatorForm />} />
@@ -21,7 +21,7 @@ function App() {
           <Route path="post-list" element={<PostList />} />
           <Route path="travel-tip-form" element={<TravelTipForm />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }

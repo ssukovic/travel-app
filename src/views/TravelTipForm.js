@@ -99,7 +99,7 @@ export const TravelTipForm = () => {
         </AppBar>
       </Box>
       <Box className="formContainer">
-        <Typography variant="h5">Tell us what tip do you need</Typography>
+        <Typography variant="h5">Ask a question</Typography>
         <TextField
           id="outlined-search"
           label="Search location"
@@ -116,16 +116,26 @@ export const TravelTipForm = () => {
 
         <TextArea
           className="textArea"
-          placeholder="Tell us what tip do you need"
+          placeholder="What question about travel you have?"
         ></TextArea>
-
-        <Button
-          onClick={handleSearch}
-          variant="contained"
-          sx={{ marginTop: "15rem" }}
-        >
-          Save
-        </Button>
+        <Box className="footer">
+          <Button
+            onClick={handleSearch}
+            variant="contained"
+            sx={{ marginTop: "15rem" }}
+            className="saveButton"
+          >
+            Save
+          </Button>
+          <Button
+            variant="contained"
+            onClick={() => navigate("/")}
+            sx={{ marginTop: "15rem" }}
+            className="saveButton"
+          >
+            Cancel
+          </Button>
+        </Box>
       </Box>
     </div>
   );
